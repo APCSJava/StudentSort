@@ -42,9 +42,14 @@ public abstract class Student implements Comparable<Student> {
 	public double getGpa() {
 		return gpa;
 	}
+	public boolean equals(Student other) {
+		return (this.lastName.equals(other.getLastName()) &&
+				this.firstName.equals(other.getFirstName())&&
+				this.gradeLevel == other.getGradeLevel());
+	}
 	public String toString() {
 		String s = "";
-		s+=firstName+"\t "+lastName+"\t("+gradeLevel+")\t"+gpa;
+		s+=lastName+",\t "+firstName+"\t("+gradeLevel+")\t"+gpa;
 		return s;
 	}
 }

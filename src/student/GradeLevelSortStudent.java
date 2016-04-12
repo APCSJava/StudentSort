@@ -2,9 +2,10 @@ package student;
 
 public class GradeLevelSortStudent extends Student {
 
-	/** Return -1 if this comes before other by grade level or
-	 * 1 if this comes after other.  In the case that the grade
-	 * level is in common, use the last name to decide.
+	/** Return -1 if this student is senior by grade level or
+	 * 1 if this student is junior to other.  In the event both
+	 * students share the same grade level, sort alphabetically
+	 * by last then first name. 
 	 */
 	@Override
 	public int compareTo(Student other) {
